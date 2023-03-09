@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  
+}
+
+h4 {
+  font-size: 28px;
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10%;
+  max-width: 1440px;
+}
+
+p {
+  margin: 4rem auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  text-align: left;
+  color: white;
+}
+
+.card-one {
+  background-color: hsl(31, 77%, 52%);
+  padding: 20px;
+  flex: 25%;
+  margin: .5rem .5rem;
+}
+
+.card-two {
+  background-color: hsl(184, 100%, 22%);
+  padding: 20px;
+  flex: 25%;
+  margin: .5rem .5rem;
+}
+
+.card-three {
+  background-color: hsl(179, 100%, 13%);
+  padding: 20px;
+  flex: 25%;
+  margin: .5rem .5rem;
+}
+
+button {
+  border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+  .card-one, .card-two, .card-three {
+    flex: 100%;
+  }
+}
+
+.button {
+  display: inline-block;
+  border-radius: 50px;
+  background-color: white;
+  border: none;
+  text-align: center;
+  font-size: 12px;
+  padding: 8px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-sedans {
+  color: hsl(31, 77%, 52%);
+}
+
+.button-suvs {
+  color: hsl(184, 100%, 22%);
+}
+
+.button-luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="flex-container">
+      <div class="card-one">
+        <img src="images/icon-sedans.svg" alt="Avatar" >
+        <div class="card-cont">
+          <h4><b>Sedans</b></h4> 
+          <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+            or on your next road trip.</p> 
+            <button class="button button-sedans"><span>Learn more</span></button>
+        </div>
+      </div>
+    
+      <div class="card-two">
+        <img src="images/icon-suvs.svg" alt="Avatar" >
+        <div class="card-cont">
+          <h4><b>SUVs</b></h4> 
+          <p> Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+            and off-road adventures.</p> 
+            <button class="button button-suvs"><span>Learn more</span></button>
+        </div>
+      </div>
+    
+      <div class="card-three">
+        <img src="images/icon-luxury.svg" alt="Avatar" >
+        <div class="card-cont">
+          <h4><b>Luxury</b></h4> 
+          <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+            rental and arrive in style.</p> 
+            <button class="button button-luxury"><span>Learn more</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Jeorhg</a>.
+  </div>
+</body>
+</html>
